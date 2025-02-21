@@ -101,7 +101,7 @@ const Home = () => {
                     sx={{padding: '30px', width: {xs: '100%', md: '30%'}, borderRadius: '0px', display: 'flex', flexDirection: 'column', alignItems: 'center', border: 'none'}}>
                     <ProfilePhoto alt="Jarif Ahmed Soumik" src="https://github.com/jasoumik.png"/>
                     <Typography variant="h4" fontWeight="bold" noWrap>
-                        John Bhai
+                        Jarif Ahmed Soumik
                     </Typography>
                     <Typography variant="h6" sx={{
                         color: theme.palette.mode === 'dark' ? 'white' : '', // Adjust color based on theme mode

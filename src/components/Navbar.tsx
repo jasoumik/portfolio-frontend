@@ -24,7 +24,7 @@ const Navbar = () => {
                     padding: '20px',
                 }}
             >
-                <Typography variant="h6" color="inherit" component={Link} to="/">John Saheb</Typography>
+                <Typography variant="h6" color="inherit" component={Link} to="/">Jarif Ahmed Soumik</Typography>
                 <List>
                     <ListItemButton component={Link} to="/">Home</ListItemButton>
                     <ListItemButton component={Link} to="/about">About</ListItemButton>
