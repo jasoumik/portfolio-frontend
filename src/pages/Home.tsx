@@ -99,19 +99,25 @@ const Home = () => {
                 {/* Sidebar */}
                 <Box
                     sx={{padding: '30px', width: {xs: '100%', md: '30%'}, borderRadius: '0px', display: 'flex', flexDirection: 'column', alignItems: 'center', border: 'none'}}>
-                    <ProfilePhoto alt="John Doe" src="https://via.placeholder.com/150"/>
-                    <Typography variant="h4" fontWeight="bold">John Doe</Typography>
+                    <ProfilePhoto alt="Jarif Ahmed Soumik" src="https://github.com/jasoumik.png"/>
+                    <Typography variant="h4" fontWeight="bold" noWrap>
+                        John Bhai
+                    </Typography>
                     <Typography variant="h6" sx={{
                         color: theme.palette.mode === 'dark' ? 'white' : '', // Adjust color based on theme mode
-                    }}>Software Engineer</Typography>
-                    <Divider sx={{my: 2}}/>
+                    }}>Software Engineer
+                    </Typography>
+                    <Typography variant="h6" fontWeight="bold" sx={{
+                        color: theme.palette.mode === 'dark' ? 'white' : '', // Adjust color based on theme mode
+                    }} noWrap>Dhaka, Bangladesh
+                    </Typography>
+                    <Divider flexItem sx={{display: {md: 'block'}, bgcolor: 'white', mt: 2, mb: 1}}/>
                     <Box sx={{display: 'flex', gap: 1}}>
-                        <ContactIcon icon={Phone} link="tel:+1234567890"/>
-                        <ContactIcon icon={Email} link="mailto:john.doe@example.com"/>
-                        <ContactIcon icon={LocationOn} link="https://www.google.com/maps/place/New+York,+USA"/>
-                        <ContactIcon icon={Language} link="https://www.johndoe.com"/>
-                        <ContactIcon icon={LinkedIn} link="https://linkedin.com/in/johndoe"/>
-                        <ContactIcon icon={GitHub} link="https://github.com/johndoe"/>
+                        <ContactIcon icon={Phone} link="tel:+8801716684803"/>
+                        <ContactIcon icon={Email} link="mailto:jasoumik@gmail.com"/>
+                        <ContactIcon icon={Language} link="https://www.jasoumik.com"/>
+                        <ContactIcon icon={LinkedIn} link="https://linkedin.com/in/jasoumik"/>
+                        <ContactIcon icon={GitHub} link="https://github.com/jasoumik"/>
                     </Box>
                 </Box>
                 <Divider orientation="vertical" flexItem sx={{display: {xs: 'none', md: 'block'}, bgcolor: 'white'}}/>
