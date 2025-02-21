@@ -1,46 +1,72 @@
-# Getting Started with Create React App
+# Portfolio Frontend with React & Laravel API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a full-stack project using React for the frontend and Laravel for the backend API. This guide will help you set up and run both parts of the project on your local machine.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+Make sure you have the following installed:
 
-### `npm start`
+- **Node.js** (for React)
+- **npm** (Node package manager)
+- **PHP** (for Laravel)
+- **Composer** (for PHP package management)
+- **MySQL** (or another database for Laravel)
+- **Laravel** (for the API backend)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Setting Up the Frontend (React)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+ 1. Clone the repository:
+git clone https://github.com/your-username/portfolio-frontend.git
+cd portfolio-frontend
+2. Install dependencies:
+npm install
+3. Start the React development server:
+npm start
+This will start the frontend server at http://localhost:3000.
 
-### `npm test`
+Setting Up the Backend (Laravel API)
+1. Clone the repository (if you haven't already):
+git clone https://github.com/your-username/portfolio-backend.git
+cd portfolio-backend
+2. Install Composer dependencies:
+composer install
+3. Create a .env file:
+Copy the .env.example file to .env:
+cp .env.example .env
+4. Generate the application key:
+php artisan key:generate
+5. Set up your database:
+Make sure your database settings in .env are correct. Update the following values based on your setup:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=portfolio
+DB_USERNAME=root
+DB_PASSWORD=
+6. Run the migrations:
+php artisan migrate
+7. Start the Laravel development server:
+php artisan serve
+This will start the backend server at http://127.0.0.1:8000.
 
-### `npm run build`
+Testing the API
+Once both the frontend and backend are running, you can test the API by visiting http://127.0.0.1:8000/api/projects in your browser or using an API tool like Postman.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Troubleshooting
+404 Not Found Error:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Ensure your routes in routes/api.php are set up correctly.
+Run php artisan route:list to verify your API routes are listed.
+CORS Issues:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you're facing CORS (Cross-Origin Resource Sharing) issues, make sure you have fruitcake/laravel-cors installed and properly configured in app/Http/Kernel.php.
+Frontend API Request Not Working:
 
-### `npm run eject`
+Ensure your React frontend is making requests to the correct backend URL (http://127.0.0.1:8000/api/).
+Additional Notes
+This project assumes you're familiar with the basics of React, Laravel, and API development.
+The frontend React project uses TypeScript and the backend is powered by Laravel and MySQL.
+For production, make sure to set up proper environment configurations for both frontend and backend.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
