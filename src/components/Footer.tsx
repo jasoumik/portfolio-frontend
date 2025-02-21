@@ -1,9 +1,22 @@
-import { Box, Typography } from "@mui/material";
+import React from 'react';
+import { Box, Typography } from '@mui/material';
 
 const Footer = () => {
     return (
-        <Box sx={{ textAlign: "center", py: 2, mt: 4, bgcolor: "#f5f5f5" }}>
-            <Typography variant="body2">&copy; {new Date().getFullYear()} My Portfolio. All rights reserved.</Typography>
+        <Box
+            sx={{
+                backgroundColor: 'primary.main',
+                color: 'white',
+                textAlign: 'center',
+                padding: '10px',
+                position: 'relative',
+                bottom: 0,
+                width: '100%',
+            }}
+        >
+            <Typography variant="body2" color="inherit">
+                &copy; {new Date().getFullYear()} John Doe. All Rights Reserved.
+            </Typography>
         </Box>
     );
 };
