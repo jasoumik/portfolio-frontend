@@ -15,7 +15,7 @@ const Navbar = () => {
             {/* Desktop Sidebar Navigation - Only Visible on md and larger screens */}
             <Box
                 sx={{
-                    display: { xs: 'none', md: 'block' },
+                    display: { xs: 'block', md: 'block' },
                     width: 250,
                     flexShrink: 0,
                     bgcolor: 'primary.main',
@@ -32,41 +32,6 @@ const Navbar = () => {
                     <ListItemButton component={Link} to="/contact">Contact</ListItemButton>
                 </List>
             </Box>
-
-            {/* Mobile Drawer Navigation - Only on xs Screens */}
-            <Drawer
-                anchor="left"
-                open={drawerOpen}
-                onClose={toggleDrawer(false)}
-                sx={{ display: { xs: 'block', md: 'none' } }} // Mobile only
-            >
-                <Box sx={{ width: 250 }} role="presentation">
-                    <List>
-                        <ListItemButton component={Link} to="/" onClick={toggleDrawer(false)}>
-                            <ListItemText primary="Home" />
-                        </ListItemButton>
-                        <ListItemButton component={Link} to="/about" onClick={toggleDrawer(false)}>
-                            <ListItemText primary="About" />
-                        </ListItemButton>
-                        <ListItemButton component={Link} to="/projects" onClick={toggleDrawer(false)}>
-                            <ListItemText primary="Projects" />
-                        </ListItemButton>
-                        <ListItemButton component={Link} to="/contact" onClick={toggleDrawer(false)}>
-                            <ListItemText primary="Contact" />
-                        </ListItemButton>
-                    </List>
-                </Box>
-            </Drawer>
-
-            {/* Mobile Navbar with Menu Button */}
-            <AppBar position="fixed" sx={{ display: { xs: 'flex', md: 'none' } }}>
-                <Toolbar>
-                    <IconButton onClick={toggleDrawer(true)} color="inherit">
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" sx={{ flexGrow: 1 }}>John Doe</Typography>
-                </Toolbar>
-            </AppBar>
 
             {/* Content Area - Shifts on Desktop */}
             <Box
