@@ -15,7 +15,7 @@ const Footer = () => {
             }}
         >
             <Typography variant="body2" color="inherit">
-                &copy; {new Date().getFullYear()} John Doe. All Rights Reserved.
+                &copy; {new Date().getFullYear()} Jarif Ahmed Soumik. All Rights Reserved.
             </Typography>
         </Box>
     );
